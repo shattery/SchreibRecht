@@ -1,0 +1,133 @@
+---
+import { Picture } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import { slide } from 'astro:transitions';
+import test from "../assets/test.jpg"
+import men_1 from "../assets/hannes.jpg"
+import men_2 from "../assets/ferdi.jpg"
+import side_dark from "../assets/lrs-de.png"
+import side_light from "../assets/light-chat.png"
+import "../css/global.css"
+---
+
+<Layout 
+title="SchreibRecht | Über Uns"
+description="Kostenlose Online-Übungen für Kinder und Erwachsene mit LRS.">
+
+    <div class="relative isolate overflow-hidden dark:bg-dark bg-white/40 px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+          <svg class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-secondary [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]" aria-hidden="true">
+            <defs>
+              <pattern id="e813992c-7d03-4cc4-a2bd-151760b470a0" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+                <path d="M100 200V.5M.5 .5H200" fill="none" />
+              </pattern>
+            </defs>
+            <svg x="50%" y="-1" class="overflow-visible fill-secondary">
+              <path d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z" stroke-width="0" />
+            </svg>
+            <rect width="100%" height="100%" stroke-width="0" fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
+          </svg>
+        </div>
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-3">
+          <div class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+            <div class="lg:pr-4">
+              <div class="lg:max-w-lg">
+                <p class="text-base/7 font-semibold text-dark dark:text-secondary"></p>
+                <h1 class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-dark dark:text-secondary sm:text-5xl name">Über Uns</h1>
+                <p class="mt-6 text-xl/8 text-gray-700 dark:text-gray-400"></p>
+              </div>
+            </div>
+          </div>
+          <div class="hidden md:grid -ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+            <Picture src={side_dark}  alt="autos" format='webp' quality="max" width={1500} class="hidden dark:flex max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[42rem]"/>
+            <Picture src={side_light}  alt="autos" format='webp' quality="max" width={1500} class="dark:hidden md:flex max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[42rem]"/>
+          </div>
+          <div class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+            <div class="lg:pr-4">
+              <div class="max-w-xl text-base/7 text-gray-500 dark:text-gray-300 lg:max-w-lg">
+                <p transition:animate={slide({ duration: '0.1s' })} class="font-bold border-r-4 border-primary">Ein frund von uns leidet selbst unter LRS (Lese-Rechtschreib-Schwäche) und hat bereits nach Apps und Websites gesucht, die ihm bei Rechtschreibung und Lesen helfen könnten – jedoch ohne Erfolg. Deshalb haben wir uns gedacht, warum nicht selbst eine Lösung entwickeln, zumal wir zu zweit, mit 15 und 17 Jahren, daran arbeiten könnten.</p>
+                <ul role="list" class="mt-8 space-y-8 text-gray-600">
+                  <li transition:animate={slide({ duration: '0.2s' })}  class="border-r-4 border-primary p-1 flex gap-x-2">
+                    <svg class="mt-1 size-5 flex-none text-primary inline-block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path d="M0 0h24v24H0z"/><path fill="currentColor" d="M13.5 4a1.5 1.5 0 0 0-3 0v.5h-1a4.5 4.5 0 0 0 0 9h5a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 0 0 3h3.5v.5a1.5 1.5 0 0 0 3 0v-.5h1a4.5 4.5 0 1 0 0-9h-5a1.5 1.5 0 1 1 0-3H17a1.5 1.5 0 0 0 0-3h-3.5z"/></g></svg>
+                    <span class="text-gray-600 dark:text-gray-200"><strong class="font-semibold text-primary block name">Kostelos.</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</span>
+                  </li>
+                  <li transition:animate={slide({ duration: '0.3s' })}  class="border-r-4 border-primary  p-1 flex gap-x-2">
+                    <svg class="mt-1 size-5 flex-none text-primary inline-block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M8.084 2.6c.162-.365.523-.6.923-.6h7.977c.75 0 1.239.79.903 1.462L15.618 8h3.358c.9 0 1.35 1.088.714 1.724L7.737 21.677c-.754.754-2.01-.022-1.672-1.033L8.613 13H5.015a1.01 1.01 0 0 1-.923-1.42z"/></g></svg>
+                    <span class="text-gray-600 dark:text-gray-200"><strong class="font-semibold text-primary block name">Einer der Ersten.</strong> Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</span>
+                  </li>
+                  <li transition:animate={slide({ duration: '0.4s' })}  class="border-r-4 border-primary p-1 flex gap-x-3">
+                    <svg class="mt-1 size-5 flex-none text-primary inline-block" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M11 2a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 11c-2.395 0-4.575.694-6.178 1.672c-.8.488-1.484 1.064-1.978 1.69C2.358 16.976 2 17.713 2 18.5c0 .845.411 1.511 1.003 1.986c.56.45 1.299.748 2.084.956C6.665 21.859 8.771 22 11 22q.346 0 .685-.005a1 1 0 0 0 .89-1.428A6 6 0 0 1 12 18c0-1.252.383-2.412 1.037-3.373a1 1 0 0 0-.72-1.557Q11.671 13 11 13m7.864.997a1 1 0 0 0-1.728 0l-.91 1.562l-1.766.382a1 1 0 0 0-.534 1.644l1.204 1.348l-.182 1.798a1 1 0 0 0 1.398 1.016l1.654-.73l1.654.73a1 1 0 0 0 1.398-1.016l-.182-1.799l1.204-1.347a1 1 0 0 0-.534-1.644l-1.766-.382z"/></g></svg>
+                    <span class="text-gray-600 dark:text-gray-200"><strong class="font-semibold text-primary block name">Du kannst uns Vertrauen.</strong> Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</span>
+                  </li>
+                </ul>
+                <div class="mt-10 w-full h-1 bg-primary"></div>
+                <h2 class="mt-10 text-2xl font-bold tracking-tight text-primary name">Kein LRS? Kein Problem.</h2>
+                <p class="mt-2">Spellid ist nicht für LRS hauptsächlich ausgelegt es ist für alle die lesen und ihre Rechtschreibung verbesern wollen :)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-primary dark:bg-primarydark py-24 sm:py-32">
+        <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
+          <div class="max-w-xl">
+            <h2 class="text-pretty text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-4xl name">Unser Team</h2>
+            <p class="mt-2 text-lg/8 text-white dark:text-gray-200">Wir haben diese seite zu zweit gebaut und hoffe sie gefählt euch!</p>
+          </div>
+          <ul role="list" class="grid gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+            <li>
+              <div class="bg-white rounded-md flex justify-center items-center gap-x-8 mr-1 py-10">
+                  <Picture src={men_1} alt="shattery567" class="size-16 rounded-full "/>
+                  <div>
+                    <h3 class="text-base/7 font-semibold tracking-tight text-gray-900">Shattery567</h3>
+                    <p class="text-sm/6 font-semibold text-primary">Frontend Dev<span class="text-black">|</span><a href="https://github.com/shattery" class="text-sm/6 font-semibold text-gray-600"><svg class="inline-block size-5 mb-[1px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16M9.243 6.212a5.8 5.8 0 0 1 1.17.553A7 7 0 0 1 12 6.588c.548 0 1.08.061 1.586.177a5.8 5.8 0 0 1 1.17-.553l.284-.092c.393-.117.83-.193 1.197-.01c.17.085.312.218.414.378c.208.326.283.746.329 1.123a4.2 4.2 0 0 1-.033 1.27c.447.635.72 1.387.72 2.207c0 1.845-1.315 3.262-3.005 3.976q.058.22.078.455l.01.246l-.029 2.745a1 1 0 1 1-2-.02l.029-2.74a.74.74 0 0 0-.168-.468l-.068-.073c-.604-.57-.296-1.561.493-1.719c1.74-.347 2.66-1.446 2.66-2.402c0-.447-.182-.897-.557-1.306a1 1 0 0 1-.23-.94l.04-.123c.053-.127.082-.285.09-.456a3.3 3.3 0 0 0-.62.375a1.02 1.02 0 0 1-.913.167A5 5 0 0 0 12 8.588c-.53 0-1.029.079-1.479.217a1.02 1.02 0 0 1-.913-.166a3.3 3.3 0 0 0-.621-.376q.009.195.055.356l.036.101c.149.361.075.776-.189 1.063c-.375.409-.556.858-.556 1.305c0 .956.92 2.055 2.66 2.402c.751.15 1.067 1.057.573 1.635l-.08.084a.75.75 0 0 0-.229.44l-.007.116l-.029 2.745a1 1 0 1 1-2-.02l.005-.457a2.7 2.7 0 0 1-1.046-.202a2.6 2.6 0 0 1-.985-.757a2 2 0 0 1-.13-.188l-.141-.234c-.123-.2-.26-.392-.411-.44a.75.75 0 1 1 .474-1.423c.437.145.715.458.894.69c.16.208.298.433.466.635c.137.164.265.271.419.336c.106.045.256.084.476.083l.008-.784q0-.356.088-.685c-1.69-.714-3.005-2.131-3.005-3.976c0-.82.272-1.57.718-2.205a4.2 4.2 0 0 1-.033-1.271c.046-.377.12-.798.329-1.124c.102-.16.244-.292.414-.378c.366-.183.804-.107 1.197.01z"/></g></svg></a></p>
+                  </div>
+              </div>
+            </li>
+            <li>
+              <div class="bg-white rounded-md flex justify-center items-center gap-x-8 mr-1 py-10">
+                  <Picture src={men_2} alt="shattery567" class="size-16 rounded-full "/>
+                  <div>
+                    <h3 class="text-base/7 font-semibold tracking-tight text-gray-900">Ferdi W</h3>
+                    <p class="text-sm/6 font-semibold text-primary">Web Desinger<span class="text-black">|</span><a href="https://github.com/FERDI123456789" class="text-sm/6 font-semibold text-gray-600"><svg class="inline-block size-5 mb-[1px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16M9.243 6.212a5.8 5.8 0 0 1 1.17.553A7 7 0 0 1 12 6.588c.548 0 1.08.061 1.586.177a5.8 5.8 0 0 1 1.17-.553l.284-.092c.393-.117.83-.193 1.197-.01c.17.085.312.218.414.378c.208.326.283.746.329 1.123a4.2 4.2 0 0 1-.033 1.27c.447.635.72 1.387.72 2.207c0 1.845-1.315 3.262-3.005 3.976q.058.22.078.455l.01.246l-.029 2.745a1 1 0 1 1-2-.02l.029-2.74a.74.74 0 0 0-.168-.468l-.068-.073c-.604-.57-.296-1.561.493-1.719c1.74-.347 2.66-1.446 2.66-2.402c0-.447-.182-.897-.557-1.306a1 1 0 0 1-.23-.94l.04-.123c.053-.127.082-.285.09-.456a3.3 3.3 0 0 0-.62.375a1.02 1.02 0 0 1-.913.167A5 5 0 0 0 12 8.588c-.53 0-1.029.079-1.479.217a1.02 1.02 0 0 1-.913-.166a3.3 3.3 0 0 0-.621-.376q.009.195.055.356l.036.101c.149.361.075.776-.189 1.063c-.375.409-.556.858-.556 1.305c0 .956.92 2.055 2.66 2.402c.751.15 1.067 1.057.573 1.635l-.08.084a.75.75 0 0 0-.229.44l-.007.116l-.029 2.745a1 1 0 1 1-2-.02l.005-.457a2.7 2.7 0 0 1-1.046-.202a2.6 2.6 0 0 1-.985-.757a2 2 0 0 1-.13-.188l-.141-.234c-.123-.2-.26-.392-.411-.44a.75.75 0 1 1 .474-1.423c.437.145.715.458.894.69c.16.208.298.433.466.635c.137.164.265.271.419.336c.106.045.256.084.476.083l.008-.784q0-.356.088-.685c-1.69-.714-3.005-2.131-3.005-3.976c0-.82.272-1.57.718-2.205a4.2 4.2 0 0 1-.033-1.271c.046-.377.12-.798.329-1.124c.102-.16.244-.292.414-.378c.366-.183.804-.107 1.197.01z"/></g></svg></a></p>
+                  </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+</Layout>
+
+<style>
+#rainbow-shadow {
+    position: relative;
+    padding: 1rem; /* Platz für den Inhalt */
+    border-radius: 50px; /* Runde Ecken */
+    z-index: 1; /* Sicherstellen, dass das Haupt-Element über dem Gradient liegt */
+}
+
+#rainbow-shadow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit; /* Gleiche Ecken wie das Haupt-Element */
+    padding: 2px; /* Breite des Regenbogen-Rahmens */
+    background: linear-gradient(
+        90deg,
+        #1b1b1b,
+        lightblue,
+        lightblue,
+        #1b1b1b
+        
+    );
+    -webkit-mask: linear-gradient(black, red) content-box, linear-gradient(black, red);
+    -webkit-mask-composite: destination-out; /* Webkit-Support */
+    mask-composite: exclude; /* Standard */
+}
+
+</style>
