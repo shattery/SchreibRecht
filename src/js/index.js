@@ -4,7 +4,7 @@ const baseDeletingSpeed = 50; // Base deleting speed in milliseconds
 const wordPause = 1000; // Pause in milliseconds after a word is fully typed
 
 let wordIndex = 0; // Tracks the current word
-let charIndex = 0; // Tracks the current character
+let charIndex = 0; // Tracks the current character-
 let isTyping = true; // True if typing, false if deleting
 let lastTime = 0; // Tracks the last animation frame time
 const typingSpeeds = words.map(() => Math.random() * 50 + baseTypingSpeed); // Precomputed random typing speeds

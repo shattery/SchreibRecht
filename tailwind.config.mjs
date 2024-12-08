@@ -12,10 +12,11 @@ export default {
 					dark:"#1b1b1b",
 					primary:"#0090FF",
 					primarydark: "#005F99",
+					orange: "#F59E0B",
                     secondary:"#B4B4B4",
 					secondarydark:"#4E4E4E",
 					
-  
+				
 
 
 				
