@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Popup from '../components/popup';
-import SentenceQuiz from '../components/SentenceQuiz';
-import Listening from '../components/listening';
-import CommaTest from '../components/comma';
-import FinalResultPopup from '../components/FinalResultPopup'; // New component for final result
+import Popup from './popup';
+import SentenceQuiz from './SentenceQuiz';
+import Listening from './listening';
+import CommaTest from './comma';
+import FinalResultPopup from './FinalResultPopup'; // New component for final result
 
 function App() {
   const [showPopup, setShowPopup] = useState(false);
