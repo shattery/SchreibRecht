@@ -271,18 +271,579 @@ export const commaTestExercises = Array.from({ length: 100 }, (_, i) => ({
     aufgabe: `Übung ${i + 1}: Fülle die Lücke mit der richtigen Option.`,
     hinweis: "Achte auf Grammatik und Zeitform.",
     quizzes: [
+     
       {
-        sentence: `Gestern habe ich ${i + 1} ___ gesehen.`,
+        sentence: `Gestern habe ich ___ gesehen.`,
         options: ["schnell", "schneller", "schnellsten"],
         correctAnswer: "schnell",
       },
+      {
+        sentence: `Er hat versucht, ___ zu antworten.`,
+        options: ["richtig", "richtigster", "richtigsten"],
+        correctAnswer: "richtig",
+      },
+      {
+        sentence: `Wir gingen in den Park, weil es ___ war.`,
+        options: ["sonnig", "sonniger", "sonnigsten"],
+        correctAnswer: "sonnig",
+      },
+      {
+        sentence: `Der Hund lief ___ durch den Garten.`,
+        options: ["schnell", "schneller", "schnellsten"],
+        correctAnswer: "schnell",
+      },
+      {
+        sentence: `Heute ist der ___ Tag der Woche.`,
+        options: ["erste", "erster", "erstens"],
+        correctAnswer: "erste",
+      },
+      {
+        sentence: `Sie kam ___ zu spät zur Arbeit.`,
+        options: ["leider", "leiderer", "leidersten"],
+        correctAnswer: "leider",
+      },
+      {
+        sentence: `Wir konnten den Berg ___ erklimmen.`,
+        options: ["leicht", "leichter", "leichtest"],
+        correctAnswer: "leicht",
+      },
+      {
+        sentence: `Er sagte, dass er ___ kommt.`,
+        options: ["bald", "balder", "baldesten"],
+        correctAnswer: "bald",
+      },
+      {
+        sentence: `Das Auto fuhr ___ als erwartet.`,
+        options: ["langsamer", "langsam", "langsamst"],
+        correctAnswer: "langsamer",
+      },
+      {
+        sentence: `Die Prüfung war ___ als letztes Jahr.`,
+        options: ["einfacher", "einfach", "einfachst"],
+        correctAnswer: "einfacher",
+      },
+      {
+        sentence: `Die Blumen sind ___ schön.`,
+        options: ["immer", "immere", "immersten"],
+        correctAnswer: "immer",
+      },
+      {
+        sentence: `Wir haben uns im Urlaub ___ entspannt.`,
+        options: ["gut", "besser", "am besten"],
+        correctAnswer: "gut",
+      },
+      {
+        sentence: `Ich fand den Film ___ langweilig.`,
+        options: ["ziemlich", "ziemlicher", "ziemlichst"],
+        correctAnswer: "ziemlich",
+      },
+      {
+        sentence: `Er lief so ___ wie möglich.`,
+        options: ["schnell", "schneller", "schnellsten"],
+        correctAnswer: "schnell",
+      },
+      {
+        sentence: `Sie arbeitet ___ als ihr Kollege.`,
+        options: ["härter", "hart", "hartest"],
+        correctAnswer: "härter",
+      },
+      {
+        sentence: `Das war der ___ Tag meines Lebens.`,
+        options: ["schönste", "schönsten", "schönster"],
+        correctAnswer: "schönste",
+      },
+      {
+        sentence: `Die Antwort war ___ korrekt.`,
+        options: ["absolut", "absolute", "absolutest"],
+        correctAnswer: "absolut",
+      },
+      {
+        sentence: `Ich finde, das ist ___ besser so.`,
+        options: ["viel", "vieler", "vielfach"],
+        correctAnswer: "viel",
+      },
+      {
+        sentence: `Die Kinder spielen ___ im Garten.`,
+        options: ["glücklich", "glücklicher", "glücklichsten"],
+        correctAnswer: "glücklich",
+      },
+      {
+        sentence: `Er ist ___ als ich.`,
+        options: ["älter", "alt", "ältest"],
+        correctAnswer: "älter",
+      },
+      {
+        sentence: `Der Kuchen schmeckt ___ gut.`,
+        options: ["sehr", "sehre", "am sehrsten"],
+        correctAnswer: "sehr",
+      },
+      {
+        sentence: `Wir sind ___ rechtzeitig angekommen.`,
+        options: ["gerade", "gerader", "geradesten"],
+        correctAnswer: "gerade",
+      },
+      {
+        sentence: `Sie hat ___ auf die Frage geantwortet.`,
+        options: ["klug", "klüger", "klugst"],
+        correctAnswer: "klug",
+      },
+      {
+        sentence: `Es ist ___ als gestern.`,
+        options: ["kälter", "kalt", "kältest"],
+        correctAnswer: "kälter",
+      },
+      {
+        sentence: `Ich finde dieses Buch ___ spannend.`,
+        options: ["unglaublich", "unglaublicher", "unglaublichsten"],
+        correctAnswer: "unglaublich",
+      },
+      {
+        sentence: `Die Sonne scheint heute ___ hell.`,
+        options: ["besonders", "besonderer", "besonderst"],
+        correctAnswer: "besonders",
+      },
+      {
+        sentence: `Wir müssen ___ arbeiten, um rechtzeitig fertig zu werden.`,
+        options: ["schneller", "schnell", "schnellst"],
+        correctAnswer: "schneller",
+      },
+      {
+        sentence: `Das war eine ___ Entscheidung.`,
+        options: ["kluge", "kluger", "klugsten"],
+        correctAnswer: "kluge",
+      },
+      {
+        sentence: `Ich bin ___ froh, dass du hier bist.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+      },
+      {
+        sentence: `Er war ___ als wir ankamen.`,
+        options: ["schon", "schoner", "schonsten"],
+        correctAnswer: "schon",
+      },
+      {
+        sentence: `Das Wasser war ___ als letztes Jahr.`,
+        options: ["wärmer", "warm", "wärmsten"],
+        correctAnswer: "wärmer",
+      },
+      {
+        sentence: `Sie hat ___ viel Arbeit in das Projekt gesteckt.`,
+        options: ["extrem", "extremer", "extremst"],
+        correctAnswer: "extrem",
+      },
+      {
+        sentence: `Wir liefen so ___ wie möglich.`,
+        options: ["leise", "leiser", "leisesten"],
+        correctAnswer: "leise",
+      },
+      {
+        sentence: `Die Aufgabe war ___ einfach.`,
+        options: ["ziemlich", "ziemlicher", "ziemlichst"],
+        correctAnswer: "ziemlich",
+      },
+      {
+        sentence: `Das war ___ aufregend.`,
+        options: ["total", "totaler", "totalst"],
+        correctAnswer: "total",
+      },
+      {
+        sentence: `Er hat die Situation ___ gemeistert.`,
+        options: ["perfekt", "perfekter", "perfektest"],
+        correctAnswer: "perfekt",
+      },
+      {
+        sentence: `Ich bin ___ zufrieden mit dem Ergebnis.`,
+        options: ["sehr", "sehre", "sehrsten"],
+        correctAnswer: "sehr",
+      },
+      {
+        sentence: `Wir haben uns ___ amüsiert.`,
+        options: ["herrlich", "herrlicher", "herrlichsten"],
+        correctAnswer: "herrlich",
+      },
+      {
+        sentence: `Er ist ___ talentiert.`,
+        options: ["unglaublich", "unglaublicher", "unglaublichsten"],
+        correctAnswer: "unglaublich",
+      },
+      {
+        sentence: `Das Wetter war ___ besser als erwartet.`,
+        options: ["deutlich", "deutlicher", "deutlichst"],
+        correctAnswer: "deutlich",
+      },
+      {
+        sentence: `Ich bin ___ stolz auf dich.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+      },
+      {
+        sentence: `Ich bin ___ glücklich, dich zu sehen.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Sie ist ___ nett zu mir.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Er ist ___ gut in Mathematik.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Das war ___ ein toller Abend.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Wir haben ___ lange darauf gewartet.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Das Essen war ___ lecker.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Ich finde diesen Film ___ spannend.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Ihr Hund ist ___ süß.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Das war ___ ein harter Tag.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Ich bin ___ froh, dass du hier bist.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Er hat ___ gute Noten bekommen.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Das war ___ eine schwierige Prüfung.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Sie ist ___ schön.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Du bist ___ nett.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Es war ___ ein schöner Tag.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Ich habe ___ viel gearbeitet.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Das war ___ eine unerwartete Wendung.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Er ist ___ ein erfahrener Lehrer.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Das war ___ eine tolle Leistung.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Es ist ___ schön hier.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Du hast ___ gut gespielt.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Ich habe ___ viel zu tun.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Das war ___ eine überraschende Wendung.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Ich bin ___ froh, dich kennenzulernen.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Die Aussicht war ___ beeindruckend.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Es ist ___ kalt draußen.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Ich finde den Film ___ langweilig.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Die Party war ___ lustig.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Ich war ___ erschöpft nach dem Training.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Sie hat ___ viel für das Projekt getan.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Du hast ___ hart gearbeitet.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Das war ___ ein überraschendes Ergebnis.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Ich habe ___ viel gelernt.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Wir sind ___ aufgeregt, dass du kommst.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Das war ___ ein großer Erfolg.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Die Aussicht von hier oben ist ___ atemberaubend.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Er ist ___ ein guter Freund.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Wir haben ___ lange gewartet.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Die Lösung ist ___ einfach.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Das war ___ ein emotionaler Moment.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Ich bin ___ froh, dass du mir hilfst.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Die Aufgabe war ___ schwierig.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Es war ___ ein schöner Abend.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Ich finde den Vorschlag ___ gut.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Du hast ___ recht.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Die Aussicht war ___ spektakulär.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Er ist ___ ein hervorragender Koch.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Ich bin ___ stolz auf dich.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Es war ___ ein langer Tag.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Die Musik war ___ schön.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Der Film war ___ spannend.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Ich habe ___ viel zu lernen.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Das war ___ eine tolle Idee.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Der Test war ___ einfach.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Sie hat ___ gute Arbeit geleistet.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Das war ___ ein wunderschöner Tag.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Ich habe ___ viel über das Thema erfahren.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Der Vortrag war ___ interessant.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Das Essen war ___ gut.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    {
+        sentence: `Der Film hat mich ___ bewegt.`,
+        options: ["wirklich", "wirklicher", "wirklichst"],
+        correctAnswer: "wirklich",
+    },
+    
     ],
   }));
   
-  export const listeningExercises = Array.from({ length: 100 }, (_, i) => ({
-    aufgabe: `Hörübung ${i + 1}: Höre dir das Audio an und fülle die Lücken.`,
-    hinweis: "Konzentriere dich auf Aussprache und Betonung.",
-    audioSrc: `/audio/exercise${i + 1}.mp3`, // Beispielpfad
-    words: ["Hallo", "Welt", "das", "ist", "ein", "Test"],
-  }));
+  export const listeningExercises = [
+    [
+      {
+          aufgabe: "Hörübung 6: Höre dir das Audio an und fülle die Lücken.",
+          hinweis: "Achte auf Wörter mit der Endung -heit oder -keit.",
+          audioSrc: "/audio/exercise6.mp3",
+          words: ["Freiheit", "Ehrlichkeit", "Klarheit", "Möglichkeit", "Wahrheit"]
+      },
+      {
+          aufgabe: "Hörübung 7: Höre dir das Audio an und fülle die Lücken.",
+          hinweis: "Konzentriere dich auf Wörter mit ck und k.",
+          audioSrc: "/audio/exercise7.mp3",
+          words: ["Glück", "Backen", "Jacke", "Paket", "Stock"]
+      },
+      {
+          aufgabe: "Hörübung 8: Höre dir das Audio an und fülle die Lücken.",
+          hinweis: "Achte auf die Groß- und Kleinschreibung von Nomen.",
+          audioSrc: "/audio/exercise8.mp3",
+          words: ["Haus", "Baum", "Freundschaft", "Hund", "Buch"]
+      },
+      {
+          aufgabe: "Hörübung 9: Höre dir das Audio an und fülle die Lücken.",
+          hinweis: "Achte auf Wörter mit ß und ss. Schreibe sie genau auf.",
+          audioSrc: "/audio/exercise9.mp3",
+          words: ["Straße", "Fluss", "Gruß", "dass", "Fuß"]
+      },
+      {
+          aufgabe: "Hörübung 10: Höre dir das Audio an und fülle die Lücken.",
+          hinweis: "Höre genau auf Wörter, die ähnlich klingen, aber anders geschrieben werden.",
+          audioSrc: "/audio/exercise10.mp3",
+          words: ["mehr", "Meer", "Lied", "Leid", "Seite", "Saite"]
+      },
+      {
+          aufgabe: "Hörübung 11: Höre dir das Audio an und fülle die Lücken.",
+          hinweis: "Achte auf die Endungen -ig und -lich.",
+          audioSrc: "/audio/exercise11.mp3",
+          words: ["lustig", "herrlich", "freundlich", "mutig", "traurig"]
+      },
+      {
+          aufgabe: "Hörübung 12: Höre dir das Audio an und fülle die Lücken.",
+          hinweis: "Höre auf zusammengesetzte Wörter und schreibe sie korrekt auf.",
+          audioSrc: "/audio/exercise12.mp3",
+          words: ["Schulhof", "Wandtafel", "Blumenkasten", "Haustür", "Wintermantel"]
+      },
+      {
+          aufgabe: "Hörübung 13: Höre dir das Audio an und fülle die Lücken.",
+          hinweis: "Konzentriere dich auf Verben im Infinitiv und ihre richtige Schreibung.",
+          audioSrc: "/audio/exercise13.mp3",
+          words: ["laufen", "springen", "lesen", "schreiben", "kochen"]
+      },
+      {
+          aufgabe: "Hörübung 14: Höre dir das Audio an und fülle die Lücken.",
+          hinweis: "Höre auf Präpositionen und wie sie geschrieben werden.",
+          audioSrc: "/audio/exercise14.mp3",
+          words: ["durch", "gegen", "ohne", "um", "für"]
+      },
+      {
+          aufgabe: "Hörübung 15: Höre dir das Audio an und fülle die Lücken.",
+          hinweis: "Achte auf Verben, die im Präteritum gesprochen werden.",
+          audioSrc: "/audio/exercise15.mp3",
+          words: ["lief", "sang", "schrieb", "las", "trank"]
+      }
+  ]
+  
+  ];
   

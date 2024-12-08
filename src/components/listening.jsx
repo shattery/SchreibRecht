@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-function Listening({ audioSrc, words = [], aufgabe, hinweis }) {
+function Listening({ audioSrc, words = [], aufgabe, hinweis, onScoreChange }) {
   const [userInputs, setUserInputs] = useState(Array(words.length).fill(''));
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [score, setScore] = useState(0);
   const [showAufgabe, setShowAufgabe] = useState(false);
   const [showHinweis, setShowHinweis] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0); // Verfolgt die aktuelle Frage
+  const [allAnswered, setAllAnswered] = useState(false); // Verfolgt, ob alle Antworten abgegeben wurden
 
   const handleInputChange = (index, value) => {
     const newInputs = [...userInputs];
@@ -17,10 +19,28 @@ function Listening({ audioSrc, words = [], aufgabe, hinweis }) {
     e.preventDefault();
     setIsSubmitted(true);
 
+    // Berechne die Punkte basierend auf den Eingaben
     const correctAnswers = userInputs.filter((input, index) =>
       input.toLowerCase() === words[index].toLowerCase()
     ).length;
     setScore(correctAnswers);
+
+    // Sende das Ergebnis an die Elternkomponente, falls übergeben
+    if (onScoreChange) {
+      onScoreChange(correctAnswers, words.length);
+    }
+
+    // Überprüfen, ob alle Antworten gegeben wurden
+    if (currentIndex === words.length - 1) {
+      setAllAnswered(true); // Alle Fragen sind beantwortet
+    }
+  };
+
+  const handleNextWord = () => {
+    if (currentIndex < words.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+      setIsSubmitted(false); // Reset den Status der Eingabe
+    }
   };
 
   return (
@@ -31,7 +51,7 @@ function Listening({ audioSrc, words = [], aufgabe, hinweis }) {
           className="w-full py-2 px-4 bg-primary text-light dark:text-dark dark:bg-primarydark font-bold rounded-md hover:bg-primarydark dark:hover:bg-primary focus:outline-none transition duration-400"
           onClick={() => setShowAufgabe((prev) => !prev)}
         >
-          {showAufgabe ? 'Aufgabe verbergen' : 'Aufgabe anzeigen'}
+          {showAufgabe ? "Aufgabe verbergen" : "Aufgabe anzeigen"}
         </button>
         {showAufgabe && (
           <div className="mt-2 p-4 border text-dark dark:text-light rounded-md bg-light dark:bg-dark">
@@ -41,10 +61,10 @@ function Listening({ audioSrc, words = [], aufgabe, hinweis }) {
       </div>
       <div className="mb-4">
         <button
-          className="w-full py-2 px-4 bg-secondary text-light  dark:text-dark  font-bold rounded-md hover:bg-primary dark:hover:bg-primarydark focus:outline-none transition duration-400 "
+          className="w-full py-2 px-4 bg-secondary text-light dark:text-dark font-bold rounded-md hover:bg-primary dark:hover:bg-primarydark focus:outline-none transition duration-400"
           onClick={() => setShowHinweis((prev) => !prev)}
         >
-          {showHinweis ? 'Hinweis verbergen' : 'Hinweis anzeigen'}
+          {showHinweis ? "Hinweis verbergen" : "Hinweis anzeigen"}
         </button>
         {showHinweis && (
           <div className="mt-2 p-4 border rounded-md bg-light dark:bg-dark text-dark dark:text-light">
@@ -63,22 +83,22 @@ function Listening({ audioSrc, words = [], aufgabe, hinweis }) {
               key={index}
               type="text"
               value={userInputs[index]}
-              placeholder={ `Wort ${index + 1}`}
+              placeholder={`Wort ${index + 1}`}
               onChange={(e) => handleInputChange(index, e.target.value)}
-              disabled={isSubmitted}
-              className="p-2 border rounded-md focus:outline-none focus:ring-2 dark:placeholder:text-primarydark dark:bg-secondary  focus:ring-primary dark:focus:ring-primarydark"
+              disabled={isSubmitted || allAnswered}
+              className="p-2 border rounded-md focus:outline-none focus:ring-2 dark:placeholder:text-primarydark dark:bg-secondary focus:ring-primary dark:focus:ring-primarydark"
             />
           ))}
         </div>
         <button
           type="submit"
-          disabled={isSubmitted}
-          className={`w-full py-2 px-4 rounded-md text-light  font-bold ${isSubmitted ? 'bg-secondary cursor-not-allowed' : 'bg-primary hover:bg-primarydark'}`}
+          disabled={isSubmitted || allAnswered}
+          className={`w-full py-2 px-4 rounded-md text-light font-bold ${isSubmitted ? "bg-secondary cursor-not-allowed" : "bg-primary hover:bg-primarydark"}`}
         >
           Überprüfen
         </button>
       </form>
-      {isSubmitted && (
+      {isSubmitted && !allAnswered && (
         <div className="mt-6">
           <h2 className="text-xl font-semibold text-center mb-4 dark:text-light">Ergebnisse</h2>
           <div className="space-y-2">
@@ -86,18 +106,32 @@ function Listening({ audioSrc, words = [], aufgabe, hinweis }) {
               <p key={index} className="text-lg dark:text-light">
                 Wort {index + 1}: 
                 <span
-                  className={`font-bold ml-2   ${userInputs[index].toLowerCase() === word.toLowerCase() ? 'text-green-600' : 'text-red-600'}`}
+                  className={`font-bold ml-2 ${userInputs[index].toLowerCase() === word.toLowerCase() ? 'text-green-600' : 'text-red-600'}`}
                 >
                   {userInputs[index] || 'Nicht ausgefüllt'}
                 </span>
                 {userInputs[index].toLowerCase() !== word.toLowerCase() && (
-                  <span className="ml-2 text-green-700 dark:text-green-400  ">(Korrekt: {word})</span>
+                  <span className="ml-2 text-green-700 dark:text-green-400">(Korrekt: {word})</span>
                 )}
               </p>
             ))}
           </div>
           <p className="text-center text-lg font-bold mt-4 dark:text-light">
             Punkte: {score} / {words.length}
+          </p>
+          <button
+            onClick={handleNextWord}
+            className="mt-4 w-full py-2 px-4 rounded-md bg-primary hover:bg-primarydark text-light font-bold"
+          >
+            Nächstes Wort anzeigen
+          </button>
+        </div>
+      )}
+      {allAnswered && (
+        <div className="mt-6">
+          <h2 className="text-xl font-semibold text-center mb-4 dark:text-light">Endgültige Ergebnisse</h2>
+          <p className="text-center text-lg font-bold dark:text-light">
+            Deine Gesamtpunktzahl: {score} / {words.length}
           </p>
         </div>
       )}

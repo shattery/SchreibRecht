@@ -1,0 +1,276 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="weiteleitung">
+  <section>
+    <!-- Container -->
+    <div
+      class="mx-auto text-white w-full max-w-5xl py-16 md:py-20 md:pb-10 border-b"
+    >
+      <!-- Contents -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 sm:gap-10"
+      >
+        <!-- Content 1: Schreiben History -->
+        <div class="bg-white rounded-md text-black p-4">
+          <div class="flex justify-center font-bold name text-primary mb-1">
+            <span class="py-[1px] px-2 rounded-full">Schreiben History</span>
+          </div>
+          <div
+            class="text-white mb-4 flex h-40 w-40 mx-auto flex-col items-center justify-center rounded-full"
+            style="background: linear-gradient(to right, #0090FF 0%, #F59E0B 100%);"
+          >
+            <div class="flex justify-between space-x-10">
+              <p class="text-[12px] font-bold" id="schreibenProgress1">0%</p>
+              <p class="text-[12px] font-bold" id="schreibenProgress2">0%</p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col justify-between bg-dark text-white p-2 rounded-md mb-2"
+          >
+            <p class="text-sm font-bold md:max-w-md">
+              Hören | <span class="text-red-500">X</span>
+            </p>
+            <p class="text-sm font-bold md:max-w-md">
+              Quiz | <span class="text-red-500">X</span>
+            </p>
+            <hr class="mt-1 mb-1" />
+            <a href="" class="text-[13px] font-bold text-primary">
+              <span class="underline hover:no-underline">Öffnen</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Content 2: Lesen History -->
+        <div class="bg-white rounded-md text-black p-4">
+          <div class="flex justify-center font-bold name text-primary mb-1">
+            <span class="py-[1px] px-2 rounded-full">Lesen History</span>
+          </div>
+          <div
+            class="text-white mb-4 flex h-40 w-40 mx-auto flex-col items-center justify-center rounded-full"
+            style="background: linear-gradient(to right, #0090FF 0%, #F59E0B 100%);"
+          >
+            <div class="flex justify-between space-x-10">
+              <p class="text-[12px] font-bold" id="lesenProgress1">0%</p>
+              <p class="text-[12px] font-bold" id="lesenProgress2">0%</p>
+            </div>
+          </div>
+          <div
+            class="flex flex-col justify-between bg-dark text-white p-2 rounded-md mb-2"
+          >
+            <p class="text-sm font-bold md:max-w-md">
+              Hören | <span class="text-red-500">X</span>
+            </p>
+            <p class="text-sm font-bold md:max-w-md">
+              Quiz | <span class="text-red-500">X</span>
+            </p>
+            <hr class="mt-1 mb-1" />
+            <a href="" class="text-[13px] font-bold text-primary">
+              <span class="underline hover:no-underline">Öffnen</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Container for Details -->
+  <section>
+    <div class="mx-auto w-full max-w-7xl">
+      <div class="flex flex-col items-center">
+        <div
+          class="w-full flex gap-10 flex-col items-center justify-center lg:flex-row"
+        >
+          <!-- Schreiben Table -->
+          <div
+            class="bg-gray-100 shadow-md rounded my-6 overflow-hidden w-full max-w-sm"
+          >
+            <table class="w-full">
+              <thead>
+                <tr class="border-b border-gray-300">
+                  <th colspan="2" class="py-6 text-center text-lg w-full"
+                    >Schreiben</th
+                  >
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-gray-300">
+                  <td class="py-3 px-6 md:px-12 text-left whitespace-nowrap">
+                    <div class="flex items-center">
+                      <span class="font-semibold">Benefits Name</span>
+                    </div>
+                  </td>
+                  <td class="py-3 px-6 md:px-12 text-center">
+                    <div
+                      class="relative flex gap-3 items-center justify-center"
+                    >
+                      <svg
+                        class="h-5 w-5 md:h-8 md:w-8"
+                        width="33"
+                        height="34"
+                        viewBox="0 0 33 34"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M22 14.1953L14.6625 21.1953L11 17.6953"
+                          stroke="black"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"></path>
+                        <path
+                          d="M16.5 29.1953C23.1274 29.1953 28.5 23.8227 28.5 17.1953C28.5 10.5679 23.1274 5.19531 16.5 5.19531C9.87258 5.19531 4.5 10.5679 4.5 17.1953C4.5 23.8227 9.87258 29.1953 16.5 29.1953Z"
+                          stroke="black"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"></path>
+                      </svg>
+                      <span class="font-semibold">Yes</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-300">
+                  <td class="py-3 px-6 md:px-12 text-left whitespace-nowrap">
+                    <div class="flex items-center">
+                      <span class="font-semibold">Benefits Name</span>
+                    </div>
+                  </td>
+                  <td class="py-3 px-6 md:px-12 text-center">
+                    <div
+                      class="relative flex gap-3 items-center justify-center"
+                    >
+                      <svg
+                        class="h-5 w-5 md:h-8 md:w-8"
+                        width="33"
+                        height="34"
+                        viewBox="0 0 33 34"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M22 14.1953L14.6625 21.1953L11 17.6953"
+                          stroke="black"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"></path>
+                        <path
+                          d="M16.5 29.1953C23.1274 29.1953 28.5 23.8227 28.5 17.1953C28.5 10.5679 23.1274 5.19531 16.5 5.19531C9.87258 5.19531 4.5 10.5679 4.5 17.1953C4.5 23.8227 9.87258 29.1953 16.5 29.1953Z"
+                          stroke="black"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"></path>
+                      </svg>
+                      <span class="font-semibold">Yes</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="flex justify-center mt-5 mb-5">
+              <button
+                class="group min-w-10 font-bold p-2 bg-primary text-white rounded-lg shadow-md hover:bg-primarydark focus:outline-none transform transition duration-300 hover:scale-105 mx-4"
+              >
+                Nächste
+              </button>
+            </div>
+          </div>
+
+          <!-- Lesen Table -->
+          <div
+            class="bg-gray-100 shadow-md rounded my-6 overflow-hidden w-full max-w-sm"
+          >
+            <table class="w-full">
+              <thead>
+                <tr class="border-b border-gray-300">
+                  <th colspan="2" class="py-6 text-center text-lg w-full"
+                    >Lesen</th
+                  >
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-gray-300">
+                  <td class="py-3 px-6 md:px-12 text-left whitespace-nowrap">
+                    <div class="flex items-center">
+                      <span class="font-semibold">Benefits Name</span>
+                    </div>
+                  </td>
+                  <td class="py-3 px-6 md:px-12 text-center">
+                    <div
+                      class="relative flex gap-3 items-center justify-center"
+                    >
+                      <svg
+                        class="h-5 w-5 md:h-8 md:w-8"
+                        width="33"
+                        height="34"
+                        viewBox="0 0 33 34"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M22 14.1953L14.6625 21.1953L11 17.6953"
+                          stroke="black"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"></path>
+                        <path
+                          d="M16.5 29.1953C23.1274 29.1953 28.5 23.8227 28.5 17.1953C28.5 10.5679 23.1274 5.19531 16.5 5.19531C9.87258 5.19531 4.5 10.5679 4.5 17.1953C4.5 23.8227 9.87258 29.1953 16.5 29.1953Z"
+                          stroke="black"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"></path>
+                      </svg>
+                      <span class="font-semibold">Yes</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-b border-gray-300">
+                  <td class="py-3 px-6 md:px-12 text-left whitespace-nowrap">
+                    <div class="flex items-center">
+                      <span class="font-semibold">Benefits Name</span>
+                    </div>
+                  </td>
+                  <td class="py-3 px-6 md:px-12 text-center">
+                    <div
+                      class="relative flex gap-3 items-center justify-center"
+                    >
+                      <svg
+                        class="h-5 w-5 md:h-8 md:w-8"
+                        width="33"
+                        height="34"
+                        viewBox="0 0 33 34"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M22 14.1953L14.6625 21.1953L11 17.6953"
+                          stroke="black"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"></path>
+                        <path
+                          d="M16.5 29.1953C23.1274 29.1953 28.5 23.8227 28.5 17.1953C28.5 10.5679 23.1274 5.19531 16.5 5.19531C9.87258 5.19531 4.5 10.5679 4.5 17.1953C4.5 23.8227 9.87258 29.1953 16.5 29.1953Z"
+                          stroke="black"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"></path>
+                      </svg>
+                      <span class="font-semibold">Yes</span>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="flex justify-center mt-5 mb-5">
+              <button
+                class="group min-w-10 font-bold p-2 bg-primary text-white rounded-lg shadow-md hover:bg-primarydark focus:outline-none transform transition duration-300 hover:scale-105 mx-4"
+              >
+                Nächste
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -63,7 +63,7 @@ export default function Example() {
             <div className="bg-primary h-[1px] w-0 group-hover:w-full transition-all duration-500 ease-in-out"></div>
           </div>
           <div className="group">
-            <a href="/test" className="block rounded-lg text-xl group font-semibold text-secondary hover:text-primary transition dark:text-dark dark:hover:text-primarydark">
+            <a href="/lern_aufgaben" className="block rounded-lg text-xl group font-semibold text-secondary hover:text-primary transition dark:text-dark dark:hover:text-primarydark">
               Übungen
             </a>
             <div className="bg-primary h-[1px] w-0 group-hover:w-full transition-all duration-500 ease-in-out"></div>
@@ -71,17 +71,6 @@ export default function Example() {
         </PopoverGroup>
 
         {/* Buttons for Register, Login, and Theme toggle */}
-        <div className="mr-3 hidden lg:flex lg:flex-1 lg:justify-end ">
-          <a href="#" className="p-1 border border-secondary bg-secondary dark:bg-dark dark:border-dark dark:text-light ml-12 text-sm font-semibold text-black hover:bg-primary dark:hover:bg-primarydark hover:border-primary dark:hover:border-primarydark rounded-md hover:scale-105 transition">
-            Regestriren 
-          </a>
-        </div>
-        <div className="hidden lg:flex lg:flex-2">
-          <a href="#" className="text-sm font-semibold text-secondary dark:text-dark hover:text-primary dark:hover:text-primarydark rounded-md p-1 border border-dark/0 hover:border-primary dark:hover:border-primarydark hover:scale-105 transition">
-            Anmelden
-          </a>
-        </div>
-
         {/* Light/Dark mode switch and Hamburger icon positioned together on smaller screens */}
         <div className="flex items-center space-x-4">
           {/* Burger Icon */}
@@ -113,31 +102,26 @@ export default function Example() {
         <div className="lg:hidden p-4 bg-dark/80 dark:bg-light/80 backdrop-blur-lg">
           <PopoverGroup>
             <div className="group">
-              <a href="/" className="block rounded-lg text-xl group font-semibold text-secondary hover:text-primary transition dark:text-dark dark:hover:text-primarydark">
+              <a href="/" className="block rounded-lg text-3xl group font-semibold text-secondary hover:text-primary transition dark:text-dark dark:hover:text-primarydark">
                 Home
+                <div className="bg-primary h-[1px] w-0 group-hover:w-full transition-all duration-500 ease-in-out"></div>
               </a>
             </div>
             <div className="group">
-              <a href="/about" className="block rounded-lg text-xl group font-semibold text-secondary hover:text-primary transition dark:text-dark dark:hover:text-primarydark">
+              <a href="/about" className="block rounded-lg text-3xl group font-semibold text-secondary hover:text-primary transition dark:text-dark dark:hover:text-primarydark">
                 About
+                <div className="bg-primary h-[1px] w-0 group-hover:w-full transition-all duration-500 ease-in-out"></div>
               </a>
             </div>
             <div className="group">
-              <a href="/test" className="block rounded-lg text-xl group font-semibold text-secondary hover:text-primary transition dark:text-dark dark:hover:text-primarydark">
-                Test
+              <a href="../pages/lern_aufgaben.astro" className="block rounded-lg text-3xl group font-semibold text-secondary hover:text-primary transition dark:text-dark dark:hover:text-primarydark">
+              Übungen
+                <div className="bg-primary h-[1px] w-0 group-hover:w-full transition-all duration-500 ease-in-out"></div>
               </a>
             </div>
           </PopoverGroup>
 
           {/* Register & Login buttons in mobile */}
-          <div className="flex flex-col items-center mt-4">
-            <a href="#" className="p-2 border border-secondary bg-secondary dark:bg-dark dark:border-dark dark:text-light text-sm font-semibold text-black hover:bg-primary dark:hover:bg-primarydark hover:border-primary dark:hover:border-primarydark rounded-md hover:scale-105 transition">
-              Regestriren 
-            </a>
-            <a href="#" className="mt-2 text-sm font-semibold text-secondary dark:text-dark hover:text-primary dark:hover:text-primarydark rounded-md p-1 border border-dark/0 hover:border-primary dark:hover:border-primarydark hover:scale-105 transition">
-              Anmelden
-            </a>
-          </div>
         </div>
       )}
     </header>

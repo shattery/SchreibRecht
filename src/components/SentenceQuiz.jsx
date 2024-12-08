@@ -1,24 +1,30 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function SentenceQuiz({ quizzes, onFinish }) {
-  const [userAnswers, setUserAnswers] = useState(Array(quizzes.length).fill(null)); // Speichert die Antworten der Benutzer
+  const [userAnswers, setUserAnswers] = useState(Array(quizzes.length).fill(null));
   const [currentPage, setCurrentPage] = useState(0);
-  const [scores, setScores] = useState(Array(quizzes.length).fill(false)); // Speichert, ob eine Antwort korrekt war
+  const [scores, setScores] = useState(Array(quizzes.length).fill(false));
   const [showAufgabe, setShowAufgabe] = useState(false);
   const [showHinweis, setShowHinweis] = useState(false);
 
-  const quizzesPerPage = 2; // Anzahl der Quizfragen pro Seite
-  const maxPage = Math.ceil(quizzes.length / quizzesPerPage); // Gesamtanzahl der Seiten
+  const quizzesPerPage = 1;
+  const maxPage = Math.ceil(quizzes.length / quizzesPerPage);
 
   const handleOptionClick = (quizIndex, option) => {
     const updatedAnswers = [...userAnswers];
     const updatedScores = [...scores];
 
+    // Setze die Antwort und die Bewertung für diese Frage
     updatedAnswers[quizIndex] = option;
     updatedScores[quizIndex] = option === quizzes[quizIndex].correctAnswer;
 
+    // Speichere die aktualisierten Werte
     setUserAnswers(updatedAnswers);
     setScores(updatedScores);
+
+    // Sobald der Benutzer eine Antwort gewählt hat, rufe onFinish mit der aktuellen Gesamtpunktzahl auf
+    const totalScore = updatedScores.filter((score) => score).length;
+    onFinish(totalScore); // Übergabe des aktuellen Scores an die übergeordnete Komponente
   };
 
   const handleNextPage = () => {
@@ -37,8 +43,6 @@ function SentenceQuiz({ quizzes, onFinish }) {
     currentPage * quizzesPerPage,
     (currentPage + 1) * quizzesPerPage
   );
-
-  const totalScore = scores.filter((score) => score).length;
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-light dark:bg-dark shadow-md rounded-lg mt-9">
@@ -76,7 +80,7 @@ function SentenceQuiz({ quizzes, onFinish }) {
                 </div>
               )}
             </div>
-            <p className="text-lg dark:text-light mb-4">
+            <p className="text-lg dark:text-light text-dark mb-4">
               {quiz.sentence.split('___').map((part, idx) => (
                 <span key={idx}>
                   {part}
@@ -127,7 +131,6 @@ function SentenceQuiz({ quizzes, onFinish }) {
           <button
             type="button"
             onClick={handleNextPage}
-            disabled={currentPage === maxPage - 1}
             className="px-4 py-2 bg-primary text-light rounded-md"
           >
             Weiter
@@ -135,7 +138,10 @@ function SentenceQuiz({ quizzes, onFinish }) {
         ) : (
           <button
             type="button"
-            onClick={() => onFinish(totalScore)}
+            onClick={() => {
+              const totalScore = scores.filter((score) => score).length;
+              onFinish(totalScore); // Ergebnis anzeigen, wenn das Quiz abgeschlossen ist
+            }}
             className="px-4 py-2 bg-primary text-light rounded-md"
           >
             Ergebnisse anzeigen
