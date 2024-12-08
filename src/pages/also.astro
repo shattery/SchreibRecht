@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Listening from "../components/listening";
+import CommaTest from "../components/comma";
+import SentenceQuiz from "../components/SentenceQuiz";
+---
+
+<Layout>
+  <Listening
+    client:load
+    audioSrc="./audios/ElevenLab_Benjamin.mp3"
+    words={["Schokolade", "Känguru", "Quark", "Schildkröte"]}
+    aufgabe=`In diesem LRS-Test hörst du eine Audioaufnahme mit vier schwierigen Wörtern. Deine Aufgabe ist es:<br/><br/>
+
+1.Hörgenauigkeit prüfen: Höre die Wörter aufmerksam an.<br/><br/>
+2.Aufschreiben: Schreibe die Wörter in der Reihenfolge auf, in der sie vorgelesen werden.<br/><br/>
+3.Rechtschreibung prüfen: Achte darauf, die Wörter korrekt zu schreiben.<br/><br/>`
+    hinweis=`Du kannst das Audio mehrfach anhören.<br/>
+Versuche, die Wörter so genau wie möglich zu schreiben, ohne externe Hilfe.`
+  />
+</Layout>
