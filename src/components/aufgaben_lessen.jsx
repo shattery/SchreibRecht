@@ -134,7 +134,7 @@ function App() {
         <footer className="p-4 bg-gray-800 text-center mt-14 relative">
           
           <p className="text-sm text-gray-400">
-            Noch{allExercises[currentCategory]?.length - (completedExercises[currentCategory]?.length || 0)}{" "}
+            Noch {allExercises[currentCategory]?.length - (completedExercises[currentCategory]?.length || 0)}{" "}
             Übungen übrig
           </p>
            {/* Back Button */}

@@ -114,7 +114,7 @@ export default function Example() {
               </a>
             </div>
             <div className="group">
-              <a href="../pages/lern_aufgaben.astro" className="block rounded-lg text-3xl group font-semibold text-secondary hover:text-primary transition dark:text-dark dark:hover:text-primarydark">
+              <a href="/lern_aufgaben" className="block rounded-lg text-3xl group font-semibold text-secondary hover:text-primary transition dark:text-dark dark:hover:text-primarydark">
               Übungen
                 <div className="bg-primary h-[1px] w-0 group-hover:w-full transition-all duration-500 ease-in-out"></div>
               </a>
