@@ -1,6 +1,6 @@
 export const commaTestExercises = Array.from({ length: 100 }, (_, i) => ({
-    aufgabe: `Übung ${i + 1}: Setze die Kommata an die richtigen Stellen.`,
-    hinweis: "Denke an Nebensätze und Infinitivkonstruktionen.",
+    aufgabe: `Übung : Setze die Kommata an die richtigen Stellen.`,
+    hinweis: "Achte darauf, wo Haupt- und Nebensätze getrennt werden müssen.",
     sentences: [
       {
         words: ["Ich", "freue", "mich", "dass", "du", "gekommen", "bist"],
@@ -268,7 +268,7 @@ export const commaTestExercises = Array.from({ length: 100 }, (_, i) => ({
   }));
   
   export const sentenceQuizExercises = Array.from({ length: 100 }, (_, i) => ({
-    aufgabe: `Übung ${i + 1}: Fülle die Lücke mit der richtigen Option.`,
+    aufgabe: `Übung : Fülle die Lücke mit der richtigen Option.`,
     hinweis: "Achte auf Grammatik und Zeitform.",
     quizzes: [
      
@@ -782,68 +782,57 @@ export const commaTestExercises = Array.from({ length: 100 }, (_, i) => ({
   }));
   
   export const listeningExercises = [
-    [
+    
       {
-          aufgabe: "Hörübung 6: Höre dir das Audio an und fülle die Lücken.",
+          aufgabe: "Höre dir das Audio an und fülle nacheinander die Lücken, so wie die Wörter in der richtigen Reihenfolge gesprochen werden.",
           hinweis: "Achte auf Wörter mit der Endung -heit oder -keit.",
-          audioSrc: "/audio/exercise6.mp3",
+          audioSrc: "../../",
           words: ["Freiheit", "Ehrlichkeit", "Klarheit", "Möglichkeit", "Wahrheit"]
       },
       {
-          aufgabe: "Hörübung 7: Höre dir das Audio an und fülle die Lücken.",
+          aufgabe: "Höre dir das Audio an und fülle nacheinander die Lücken, so wie die Wörter in der richtigen Reihenfolge gesprochen werden.",
           hinweis: "Konzentriere dich auf Wörter mit ck und k.",
-          audioSrc: "/audio/exercise7.mp3",
+          audioSrc: "../../public/audios/Benjamin _ck.mp3",
           words: ["Glück", "Backen", "Jacke", "Paket", "Stock"]
       },
       {
-          aufgabe: "Hörübung 8: Höre dir das Audio an und fülle die Lücken.",
+          aufgabe: "Höre dir das Audio an und fülle nacheinander die Lücken, so wie die Wörter in der richtigen Reihenfolge gesprochen werden.",
           hinweis: "Achte auf die Groß- und Kleinschreibung von Nomen.",
-          audioSrc: "/audio/exercise8.mp3",
+          audioSrc: "../../public/audios/Benjamin_gross und klein .mp3",
           words: ["Haus", "Baum", "Freundschaft", "Hund", "Buch"]
       },
       {
-          aufgabe: "Hörübung 9: Höre dir das Audio an und fülle die Lücken.",
+          aufgabe: "Höre dir das Audio an und fülle nacheinander die Lücken, so wie die Wörter in der richtigen Reihenfolge gesprochen werden.",
           hinweis: "Achte auf Wörter mit ß und ss. Schreibe sie genau auf.",
-          audioSrc: "/audio/exercise9.mp3",
+          audioSrc: "../../public/audios/Benjamin_ss.mp3",
           words: ["Straße", "Fluss", "Gruß", "dass", "Fuß"]
       },
+      
       {
-          aufgabe: "Hörübung 10: Höre dir das Audio an und fülle die Lücken.",
-          hinweis: "Höre genau auf Wörter, die ähnlich klingen, aber anders geschrieben werden.",
-          audioSrc: "/audio/exercise10.mp3",
-          words: ["mehr", "Meer", "Lied", "Leid", "Seite", "Saite"]
-      },
-      {
-          aufgabe: "Hörübung 11: Höre dir das Audio an und fülle die Lücken.",
+          aufgabe: " Höre dir das Audio an und fülle nacheinander die Lücken, so wie die Wörter in der richtigen Reihenfolge gesprochen werden.",
           hinweis: "Achte auf die Endungen -ig und -lich.",
-          audioSrc: "/audio/exercise11.mp3",
+          audioSrc: "../../public/audios/Benjamin_lich ig.mp3",
           words: ["lustig", "herrlich", "freundlich", "mutig", "traurig"]
       },
       {
-          aufgabe: "Hörübung 12: Höre dir das Audio an und fülle die Lücken.",
+          aufgabe: " Höre dir das Audio an und fülle nacheinander die Lücken, so wie die Wörter in der richtigen Reihenfolge gesprochen werden.",
           hinweis: "Höre auf zusammengesetzte Wörter und schreibe sie korrekt auf.",
-          audioSrc: "/audio/exercise12.mp3",
+          audioSrc: "../../public/audios/Benjaminzusamengesetzte wörter.mp3",
           words: ["Schulhof", "Wandtafel", "Blumenkasten", "Haustür", "Wintermantel"]
       },
       {
-          aufgabe: "Hörübung 13: Höre dir das Audio an und fülle die Lücken.",
+          aufgabe: " Höre dir das Audio an und fülle nacheinander die Lücken, so wie die Wörter in der richtigen Reihenfolge gesprochen werden.",
           hinweis: "Konzentriere dich auf Verben im Infinitiv und ihre richtige Schreibung.",
-          audioSrc: "/audio/exercise13.mp3",
+          audioSrc: "../../public/audios/Benjamin_infinitv.mp3",
           words: ["laufen", "springen", "lesen", "schreiben", "kochen"]
       },
       {
-          aufgabe: "Hörübung 14: Höre dir das Audio an und fülle die Lücken.",
+          aufgabe: " Höre dir das Audio an und fülle nacheinander die Lücken, so wie die Wörter in der richtigen Reihenfolge gesprochen werden.",
           hinweis: "Höre auf Präpositionen und wie sie geschrieben werden.",
-          audioSrc: "/audio/exercise14.mp3",
+          audioSrc: "../../public/audios/Benjamin_present.mp3",
           words: ["durch", "gegen", "ohne", "um", "für"]
       },
-      {
-          aufgabe: "Hörübung 15: Höre dir das Audio an und fülle die Lücken.",
-          hinweis: "Achte auf Verben, die im Präteritum gesprochen werden.",
-          audioSrc: "/audio/exercise15.mp3",
-          words: ["lief", "sang", "schrieb", "las", "trank"]
-      }
-  ]
+      
   
   ];
   

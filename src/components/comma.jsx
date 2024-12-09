@@ -60,7 +60,7 @@ function CommaTest({ sentences = [], aufgabe, hinweis, onScoreChange }) {
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-light dark:bg-dark shadow-md rounded-lg mt-9">
-      <h1 className="text-2xl font-bold text-center mb-4 dark:text-light">Komma-Test</h1>
+      <h1 className="text-2xl font-bold text-center mb-4 dark:text-light text-dark" >Comma Übung</h1>
       <div className="mb-4">
         <button
           className="w-full py-2 px-4 bg-primary text-light dark:text-dark dark:bg-primarydark font-bold rounded-md hover:bg-primarydark dark:hover:bg-primary focus:outline-none transition duration-400"

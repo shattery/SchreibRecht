@@ -3,10 +3,7 @@ import CommaTest from "./comma";
 import Listening from "./listening";
 
 // Importiere Übungen aus der externen Datei
-import {
-  commaTestExercises,
-  listeningExercises,
-} from "../data/exercises";
+import { commaTestExercises, listeningExercises } from "../data/exercises";
 
 const allExercises = {
   commaTest: commaTestExercises,
@@ -16,8 +13,13 @@ const allExercises = {
 // Hilfsfunktionen für localStorage
 const getLocalStorageItem = (key, defaultValue) => {
   if (typeof window !== "undefined" && window.localStorage) {
-    const saved = localStorage.getItem(key);
-    return saved ? JSON.parse(saved) : defaultValue;
+    try {
+      const saved = localStorage.getItem(key);
+      return saved ? JSON.parse(saved) : defaultValue;
+    } catch (error) {
+      console.error("Fehler beim Abrufen des localStorage-Items", error);
+      return defaultValue;
+    }
   }
   return defaultValue;
 };
@@ -37,17 +39,17 @@ function App() {
   const [scores, setScores] = useState(() =>
     getLocalStorageItem("scores", {})
   );
-  const [lastScore, setLastScore] = useState(null); // Hinzugefügt für den letzten Score
+  const [lastScore, setLastScore] = useState(null);
 
   useEffect(() => {
     setLocalStorageItem("completedExercises", completedExercises);
     setLocalStorageItem("scores", scores);
   }, [completedExercises, scores]);
 
+  // Hole die aktuelle Übung basierend auf der Kategorie und dem Index
   const currentExercise =
     allExercises[currentCategory]?.[currentExerciseIndex];
 
-  // Berechne die Gesamtpunktzahl
   const getTotalScore = () => {
     return Object.values(scores).reduce((total, categoryScores) => {
       return (
@@ -57,7 +59,6 @@ function App() {
     }, 0);
   };
 
-  // Aktualisiert den Fortschritt
   const handleScoreUpdate = (score) => {
     const category = currentCategory;
     const exerciseIndex = currentExerciseIndex;
@@ -75,8 +76,10 @@ function App() {
       },
     }));
 
-    setLastScore(score); // Setzt den letzten Score
-    setCurrentExerciseIndex(currentExerciseIndex + 1);
+    setLastScore(score);
+
+    // Wenn der Benutzer auf "Weiter" klickt, den Index erhöhen und das Audio sowie die Wörter aktualisieren
+    setCurrentExerciseIndex((prevIndex) => prevIndex + 1);
   };
 
   const progress =
@@ -84,28 +87,25 @@ function App() {
       allExercises[currentCategory]?.length) *
     100;
 
-  // Stoppen, wenn alle Übungen abgeschlossen sind
   const allCompleted =
     completedExercises[currentCategory]?.length ===
     allExercises[currentCategory]?.length;
 
-  // Reset-Funktion
   const resetExercises = () => {
     setCompletedExercises({});
     setScores({});
     setCurrentExerciseIndex(0);
     setLastScore(null);
+    setLocalStorageItem("completedExercises", {});
+    setLocalStorageItem("scores", {});
   };
 
-  // Funktion für den "Back" Button
   const handleBackButtonClick = () => {
-    window.location.href = "/lern_aufgaben"; // Ersetze die URL durch die gewünschte Seite
+    window.location.href = "/lern_aufgaben";
   };
-  
 
   return (
     <div className="App bg-dark text-light min-h-screen">
-      {/* Navigation */}
       <div className="p-4">
         <nav className="flex justify-center space-x-8 mb-4 mt-12">
           {Object.keys(allExercises).map((category) => (
@@ -113,8 +113,8 @@ function App() {
               key={category}
               onClick={() => {
                 setCurrentCategory(category);
-                setCurrentExerciseIndex(0);
-                setLastScore(null); // Zurücksetzen des letzten Scores bei Kategorieänderung
+                setCurrentExerciseIndex(0);  // Setzt den Index zurück, wenn die Kategorie gewechselt wird
+                setLastScore(null);
               }}
               className={`py-2 px-6 font-bold rounded-lg text-lg transition duration-300 ${
                 currentCategory === category
@@ -127,12 +127,11 @@ function App() {
           ))}
         </nav>
 
-        {/* Fortschritt */}
         <div className="mb-4">
           <div className="bg-gray-600 rounded-full h-4">
             <div
               className="bg-primary h-4 rounded-full"
-              style={{ width: `${Math.min(progress, 100)}%` }} // Verhindert, dass der Fortschritt über 100% hinausgeht
+              style={{ width: `${Math.min(progress, 100)}%` }}
             ></div>
           </div>
           <p className="text-center mt-2">
@@ -145,7 +144,6 @@ function App() {
           )}
         </div>
 
-        {/* Übung oder Abschlussnachricht */}
         {allCompleted ? (
           <div className="text-center mt-8">
             <h1 className="text-xl font-bold">Alle Übungen abgeschlossen!</h1>
@@ -160,29 +158,38 @@ function App() {
           </div>
         ) : (
           <>
-            {/* Anzeige der aktuellen Übung */}
             {currentCategory === "commaTest" && currentExercise && (
               <CommaTest
                 sentences={currentExercise.sentences}
                 aufgabe={currentExercise.aufgabe}
                 hinweis={currentExercise.hinweis}
-                onScoreChange={(score) => handleScoreUpdate(score)}
+                onScoreChange={handleScoreUpdate}
               />
+            
+
             )}
             {currentCategory === "listening" && currentExercise && (
               <Listening
-                audioSrc={currentExercise.audioSrc}
-                words={currentExercise.words}
+                audioSrc={[
+                  "../../public/audios/Benjamin _ck.mp3",
+                  "../../public/audios/Benjamin_gross und klein .mp3",
+                  "../../public/audios/Benjamin_ss.mp3",
+                  "../../public/audios/Benjamin_lich ig.mp3",
+                  "../../public/audios/Benjaminzusamengesetzte wörter.mp3",
+                  "../../public/audios/Benjamin_infinitv.mp3",
+                  "../../public/audios/Benjamin_present.mp3",
+                  "/audios/bejamin_heit_keit.mp3",
+                ]}  // Das Audio der Übung wird hier gesetzt
+                words={currentExercise.words}         // Die Wörter der Übung werden hier gesetzt
                 aufgabe={currentExercise.aufgabe}
                 hinweis={currentExercise.hinweis}
-                onScoreChange={(score) => handleScoreUpdate(score)}
+                onScoreChange={handleScoreUpdate}
               />
             )}
           </>
         )}
       </div>
 
-      {/* Footer mit verbleibenden Übungen */}
       <footer className="p-4 bg-gray-800 text-center">
         <p className="text-sm text-gray-400">
           Noch {allExercises[currentCategory]?.length - (completedExercises[currentCategory]?.length || 0)}{" "}
@@ -190,7 +197,6 @@ function App() {
         </p>
       </footer>
 
-      {/* Back Button */}
       <div className="fixed bottom-4 left-4">
         <button
           onClick={handleBackButtonClick}

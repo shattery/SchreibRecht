@@ -13,7 +13,7 @@ export default {
 					primary:"#0090FF",
 					primarydark: "#005F99",
 					orange: "#F59E0B",
-                    secondary:"#B4B4B4",
+                    secondary:"#F59E0B",
 					secondarydark:"#4E4E4E",
 					
 				
