@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Picture } from "astro:assets";
-import men_1 from "../assets/hannes.jpg"
-import men_2 from "../assets/ferdi.jpg"
+import men_1 from "../assets/hannes.jpg";
+import men_2 from "../assets/ferdi.jpg";
 import { fade, slide } from "astro:transitions";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -31,19 +31,17 @@ import { fade, slide } from "astro:transitions";
               y="-1"
               patternUnits="userSpaceOnUse"
             >
-              <path d="M100 200V.5M.5 .5H200" fill="none" />
+              <path d="M100 200V.5M.5 .5H200" fill="none"></path>
             </pattern>
           </defs>
-          <rect
-            width="100%"
-            height="100%"
-            fill="url(#pattern-id)"
-          />
+          <rect width="100%" height="100%" fill="url(#pattern-id)"></rect>
         </svg>
       </div>
 
       <!-- Content -->
-      <div class="mt-32 mx-auto mb-8 flex max-w-3xl flex-col items-center text-center md:mb-12 lg:mb-8">
+      <div
+        class="mt-32 mx-auto mb-8 flex max-w-3xl flex-col items-center text-center md:mb-12 lg:mb-8"
+      >
         <h2
           class="inline-block text-3xl font-bold md:text-5xl text-dark dark:text-white dark:bg-dark p-1 name"
         >
@@ -52,17 +50,19 @@ import { fade, slide } from "astro:transitions";
         <p
           class="mx-auto mt-3 max-w-lg text-base text-gray-500 md:mb-12 md:text-2xl lg:mb-10"
         >
-        Auf SchreibRecht finden Sie Übungen, die Ihr <span class="text-secondary"><span id="word-display"></span></span> verbessern.
+          Auf SchreibRecht finden Sie Übungen, die Ihr <span
+            class="text-secondary"><span id="word-display"></span></span
+          > verbessern.
         </p>
         <div class="mt-3 flex gap-4 justify-center lg:justify-start">
           <a
-            href="/uebung"
+            href="/lern_aufgaben"
             class="inline-block px-6 py-3 bg-primary text-light font-semibold text-lg rounded-lg shadow-lg hover:scale-105 hover:bg-primary/90 transition-all"
           >
             Jetzt loslegen
           </a>
           <a
-            href="#"
+            href="/about"
             class="inline-block px-6 py-3 bg-secondary text-dark font-semibold text-lg rounded-lg shadow-lg hover:scale-105 hover:bg-secondary/80 transition-all"
           >
             Mehr erfahren
@@ -82,27 +82,26 @@ import { fade, slide } from "astro:transitions";
   <script src="../js/index.js"></script>
 </Layout>
 
-
 <style>
   #word-display {
-      font-size: 24px;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 20%;
-      font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20%;
+    font-family: Arial, sans-serif;
   }
 
   #cursor {
-      display: inline-block;
-      background-color: black;
-      width: 2px;
-      height: 24px;
-      animation: blink 0.6s steps(2, start) infinite;
+    display: inline-block;
+    background-color: black;
+    width: 2px;
+    height: 24px;
+    animation: blink 0.6s steps(2, start) infinite;
   }
 
   @keyframes blink {
-      50% {
-          opacity: 0;
-      }
+    50% {
+      opacity: 0;
+    }
   }
 </style>
