@@ -47,7 +47,7 @@ function App() {
           </li>
         </ul>
 
-        <h1 className="text-4xl font-extrabold text-dark dark:text-light mb-20">welche Übung willst du machen  <span className='name text-primary'>machen?</span></h1>
+        <h1 className="text-4xl font-extrabold text-dark dark:text-light mb-20">Welche Übung willst du   <span className='name text-primary'>Machen?</span></h1>
 
         <div className="bg-dark p-8 rounded-full dark:bg-light">
           <a href="/schreiben">

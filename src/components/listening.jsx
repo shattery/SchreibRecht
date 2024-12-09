@@ -93,7 +93,7 @@ function Listening({ words = [], aufgabe, hinweis, onScoreChange, audioSrc = [] 
               placeholder={`Wort ${index + 1}`}
               onChange={(e) => handleInputChange(index, e.target.value)}
               disabled={isSubmitted || allAnswered}
-              className="p-2 border rounded-md focus:outline-none focus:ring-2 dark:placeholder:text-primarydark dark:bg-secondary focus:ring-primary dark:focus:ring-primarydark"
+              className="p-2 border rounded-md focus:outline-none focus:ring-2 text-darrk dark:placeholder:text-primarydark dark:bg-secondary focus:ring-primary dark:focus:ring-primarydark"
             />
           ))}
         </div>

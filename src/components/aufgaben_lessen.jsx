@@ -131,22 +131,24 @@ function App() {
         )}
         
         {/* Footer mit verbleibenden Übungen */}
-        <footer className="p-4 bg-gray-800 text-center">
+        <footer className="p-4 bg-gray-800 text-center mt-14 relative">
+          
           <p className="text-sm text-gray-400">
-            Noch {totalExercises - (completedExercises[currentCategory]?.length || 0)}{" "}
+            Noch{allExercises[currentCategory]?.length - (completedExercises[currentCategory]?.length || 0)}{" "}
             Übungen übrig
           </p>
-        </footer>
-
-        {/* Back Button */}
-        <div className="fixed bottom-4 left-4">
+           {/* Back Button */}
+        <div className=" bottom-4 left-4">
           <button
             onClick={handleBackButtonClick}
-            className="bg-secondary text-dark py-2 px-6 font-bold rounded-full shadow-lg transition duration-300 hover:bg-primary hover:text-light"
+            className="bg-secondary text-dark py-2 px-6 font-bold rounded-full mt-5 shadow-lg transition duration-300 hover:bg-primary hover:text-light"
           >
             Zurück
           </button>
         </div>
+        </footer>
+
+       
       </div>
     </div>
   );

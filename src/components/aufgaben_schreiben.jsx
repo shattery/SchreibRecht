@@ -105,7 +105,8 @@ function App() {
   };
 
   return (
-    <div className="App bg-dark text-light min-h-screen">
+    <div className="App  text-light min-h-screen">
+      
       <div className="p-4">
         <nav className="flex justify-center space-x-8 mb-4 mt-12">
           {Object.keys(allExercises).map((category) => (
@@ -134,7 +135,7 @@ function App() {
               style={{ width: `${Math.min(progress, 100)}%` }}
             ></div>
           </div>
-          <p className="text-center mt-2">
+          <p className="text-center mt-2 dark:text-light text-dark">
             Fortschritt: {Math.round(Math.min(progress, 100))}%
           </p>
           {lastScore !== null && (
@@ -143,7 +144,31 @@ function App() {
             </div>
           )}
         </div>
-
+       
+<div class="absolute inset-0 -z-10 overflow-hidden">
+<svg
+class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-primary [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+aria-hidden="true"
+>
+<defs>
+<pattern
+id="pattern-id"
+width="200"
+height="200"
+x="50%"
+y="-1"
+patternUnits="userSpaceOnUse"
+>
+<path d="M100 200V.5M.5 .5H200" fill="none" />
+</pattern>
+</defs>
+<rect
+width="100%"
+height="100%"
+fill="url(#pattern-id)"
+/>
+</svg>
+</div>
         {allCompleted ? (
           <div className="text-center mt-8">
             <h1 className="text-xl font-bold">Alle Übungen abgeschlossen!</h1>
@@ -190,21 +215,22 @@ function App() {
         )}
       </div>
 
-      <footer className="p-4 bg-gray-800 text-center">
-        <p className="text-sm text-gray-400">
-          Noch {allExercises[currentCategory]?.length - (completedExercises[currentCategory]?.length || 0)}{" "}
-          Übungen übrig
-        </p>
-      </footer>
-
-      <div className="fixed bottom-4 left-4">
-        <button
-          onClick={handleBackButtonClick}
-          className="bg-secondary text-dark py-2 px-6 font-bold rounded-full shadow-lg transition duration-300 hover:bg-primary hover:text-light"
-        >
-          Zurück
-        </button>
-      </div>
+      <footer className="p-4 bg-gray-800 text-center mt-14 relative">
+          
+          <p className="text-sm text-gray-400">
+            Noch{allExercises[currentCategory]?.length - (completedExercises[currentCategory]?.length || 0)}{" "}
+            Übungen übrig
+          </p>
+           {/* Back Button */}
+        <div className=" bottom-4 left-4">
+          <button
+            onClick={handleBackButtonClick}
+            className="bg-secondary text-dark py-2 px-6 font-bold rounded-full mt-5 shadow-lg transition duration-300 hover:bg-primary hover:text-light"
+          >
+            Zurück
+          </button>
+        </div>
+        </footer>
     </div>
   );
 }
