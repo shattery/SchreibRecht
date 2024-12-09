@@ -45,7 +45,7 @@ function SentenceQuiz({ quizzes, onFinish }) {
   );
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-light dark:bg-dark shadow-md rounded-lg mt-9">
+    <div className="max-w-2xl mx-auto p-6  shadow-md rounded-lg mt-9 bg-light border border-dark dark:border-light dark:bg-dark">
       <h1 className="text-2xl font-bold text-center mb-4 dark:text-light text-dark">Satz-Quiz</h1>
       {currentQuizzes.map((quiz, index) => {
         const globalIndex = currentPage * quizzesPerPage + index;
@@ -99,7 +99,7 @@ function SentenceQuiz({ quizzes, onFinish }) {
                       ? option === quiz.correctAnswer
                         ? 'bg-green-500 text-light'
                         : 'bg-red-500 text-light'
-                      : 'bg-secondary text-light hover:bg-primarydark'
+                      : 'bg-gray-300 text-dark hover:bg-primarydark'
                   }`}
                 >
                   {option}

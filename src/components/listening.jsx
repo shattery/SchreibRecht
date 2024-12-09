@@ -48,7 +48,7 @@ function Listening({ words = [], aufgabe, hinweis, onScoreChange, audioSrc = [] 
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-light dark:bg-dark shadow-md rounded-lg mt-9">
+    <div className="max-w-2xl mx-auto p-6  shadow-md rounded-lg mt-9 bg-light border border-dark dark:border-light dark:bg-dark">
       <h1 className="text-2xl font-bold text-center mb-4 dark:text-light text-dark ">Hörübung</h1>
       <div className="mb-4">
         <button
@@ -93,7 +93,7 @@ function Listening({ words = [], aufgabe, hinweis, onScoreChange, audioSrc = [] 
               placeholder={`Wort ${index + 1}`}
               onChange={(e) => handleInputChange(index, e.target.value)}
               disabled={isSubmitted || allAnswered}
-              className="p-2 border rounded-md focus:outline-none focus:ring-2 text-darrk dark:placeholder:text-primarydark dark:bg-secondary focus:ring-primary dark:focus:ring-primarydark"
+              className="p-2 border rounded-md focus:outline-none focus:ring-2 text-dark dark:placeholder:text-dark dark:bg-gray-300 focus:ring-primary dark:focus:ring-primarydark"
             />
           ))}
         </div>

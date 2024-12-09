@@ -59,7 +59,7 @@ function CommaTest({ sentences = [], aufgabe, hinweis, onScoreChange }) {
   );
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-light dark:bg-dark shadow-md rounded-lg mt-9">
+    <div className="max-w-2xl mx-auto p-6 bg-light border border-dark dark:border-light dark:bg-dark shadow-md rounded-lg mt-9">
       <h1 className="text-2xl font-bold text-center mb-4 dark:text-light text-dark" >Comma Übung</h1>
       <div className="mb-4">
         <button
