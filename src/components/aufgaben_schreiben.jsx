@@ -171,13 +171,13 @@ function App() {
             {currentCategory === "listening" && currentExercise && (
               <Listening
                 audioSrc={[
-                  "../../public/audios/Benjamin _ck.mp3",
-                  "../../public/audios/Benjamin_gross und klein .mp3",
-                  "../../public/audios/Benjamin_ss.mp3",
-                  "../../public/audios/Benjamin_lich ig.mp3",
-                  "../../public/audios/Benjaminzusamengesetzte wörter.mp3",
-                  "../../public/audios/Benjamin_infinitv.mp3",
-                  "../../public/audios/Benjamin_present.mp3",
+                  "/audios/Benjamin _ck.mp3",
+                  "/audios/Benjamin_gross und klein .mp3",
+                  "/audios/Benjamin_ss.mp3",
+                  "/audios/Benjamin_lich ig.mp3",
+                  "/audios/Benjaminzusamengesetzte wörter.mp3",
+                  "/audios/Benjamin_infinitv.mp3",
+                  "/audios/Benjamin_present.mp3",
                   "/audios/bejamin_heit_keit.mp3",
                 ]}  // Das Audio der Übung wird hier gesetzt
                 words={currentExercise.words}         // Die Wörter der Übung werden hier gesetzt
